@@ -2,7 +2,7 @@ import Counter from "./Counter";
 const About = ({ dark }) => {
   return (
     <div className="dizme_tm_section" id="about">
-      <div className="dizme_tm_about">
+      <div className="dizme_tm_about ">
         <div className="container">
           <div className="wrapper">
             <div className="left">
