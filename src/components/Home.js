@@ -2,6 +2,8 @@ import parse from "html-react-parser";
 import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
 import Image from "next/image";
+import DarkModeToggle from "react-dark-mode-toggle";
+
 // import { Widget } from "@typeform/embed-react";
 
 const Home = ({ dark, isDarkMode }) => {
@@ -41,6 +43,7 @@ const Home = ({ dark, isDarkMode }) => {
           }}
           alt="hero background"
         />
+
         <div className="container">
           <div className="content">
             <div className="details">
@@ -83,7 +86,7 @@ const Home = ({ dark, isDarkMode }) => {
             <div className="avatar">
               <div className="image">
                 <img
-                  src={data && data.img ? data.img : "/img/slider/avatar.png"}
+                  src={data && data.img ? data.img : "/img/slider/avatar.webp"}
                   alt="image"
                 />
                 {data &&
@@ -95,7 +98,13 @@ const Home = ({ dark, isDarkMode }) => {
                           key={i}
                           className={`skills ${skill.name} anim_moveBottom`}
                         >
-                          {parse(skill.icon)}
+                          {/* {parse(skill.icon)} */}
+                          <Image
+                            height={200}
+                            width={200}
+                            src={skill.icon}
+                            alt="icon"
+                          />
                         </span>
                       )
                   )}

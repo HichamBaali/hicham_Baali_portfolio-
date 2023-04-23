@@ -668,7 +668,7 @@ h6 {
 }
 .dizme_tm_hero .skills.Scientific_Research {
   background-color: #001631;
-  right: 70px;
+  right: 164px;
   top: 80px;
 }
 .dizme_tm_hero .skills.Soft_Skills {
@@ -857,7 +857,7 @@ h6 {
   align-items: center;
 }
 .dizme_tm_about .left {
-  width: 50%;
+  width: 120%;
   padding-right: 10 0px;
 }
 .dizme_tm_about .left .image {
@@ -871,7 +871,7 @@ h6 {
 }
 .dizme_tm_about .numbers.year {
   top: 120px;
-  left: -80px;
+  /* left: -80px; */
 }
 .dizme_tm_about .numbers.project {
   bottom: 70px;
@@ -2930,6 +2930,7 @@ input[type="number"] {
   }
   .dizme_tm_hero .skills.Teaching_Skills {
     left: -20px;
+    top: 0px;
   }
   .dizme_tm_process .icon .brush {
     max-width: 90px;
@@ -3488,4 +3489,12 @@ input[type="number"] {
   .dizme_tm_contact {
     margin-bottom: 120px;
   }
+}
+.darkMode{
+  display: flex;
+}
+
+.dizme_tm_header .container .inner .menu li a button{
+  height: 45px;
+  background-color: #1cbe59;
 }

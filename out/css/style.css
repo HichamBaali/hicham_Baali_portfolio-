@@ -516,7 +516,7 @@ h6 {
   clear: both;
   float: left;
   position: relative;
-  margin-bottom: 190px;
+  /* margin-bottom: 190px; */
 }
 .dizme_tm_hero .background {
   position: absolute;
@@ -846,7 +846,7 @@ h6 {
   height: auto;
   clear: both;
   float: left;
-  padding-top: 112px;
+  /* padding-top: 20px; */
   position: relative;
 }
 .dizme_tm_about .wrapper {

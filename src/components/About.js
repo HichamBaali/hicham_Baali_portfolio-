@@ -7,7 +7,11 @@ const About = ({ dark }) => {
           <div className="wrapper">
             <div className="left">
               <div className="image">
-                <img src={`img/about/1.png`} alt="image" />
+                <img
+                  className="transform -scale-x-100"
+                  src={`img/about/1.png`}
+                  alt="image"
+                />
                 <div className="numbers year">
                   <div className="wrapper">
                     <h3>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { SliderButton } from "@typeform/embed-react";
 // import { TikTok } from "react-tiktok";
 import ReactPlayer from "react-player/youtube";
-
+import logo from "../../../public/img/logo/1.webp";
 import Image from "next/image";
 
 const Description = () => {
@@ -20,7 +20,7 @@ const Description = () => {
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
-          className="sm:w-[170%] w-[50%] "
+          className="sm:w-[170%]  "
         >
           {/* <img
             // layout="fill"
@@ -29,13 +29,28 @@ const Description = () => {
             alt="avatar"
           /> */}
           {/* <TikTok url="https://www.tiktok.com/@drhichambaali/video/7125020598518009094" /> */}
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-            loop={true}
-            controls={true}
-            playing={isPlaying}
-            onReady={() => setIsPlaying(true)}
-          />
+          <div className="hidden md:block">
+            <ReactPlayer
+              url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+              width={400}
+              height={500}
+              loop={true}
+              controls={true}
+              playing={isPlaying}
+              onReady={() => setIsPlaying(true)}
+            />
+          </div>
+          <div className="md:hidden m-auto">
+            <ReactPlayer
+              url="https://www.youtu.be/ysz5S6PUM-U"
+              width={400}
+              // height={500}
+              loop={true}
+              controls={true}
+              playing={isPlaying}
+              onReady={() => setIsPlaying(true)}
+            />
+          </div>
           {/* <video
             className="rounded-2xl"
             autoPlay
@@ -87,7 +102,7 @@ const Description = () => {
         initial={{ opacity: 0, x: -200 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}
-        className=" absolute top-0"
+        className=" absolute top-0 hidden"
         data-wow-duration="1s"
       >
         <img src="img/brushes/about/1.png" alt="image" />
@@ -115,24 +130,30 @@ const Description = () => {
         initial={{ opacity: 0, scale: 0.1 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}
-        className="absolute top-0 right-1/2"
+        className="absolute top-72 md:top-0 md:right-1/2 -z-20"
         data-wow-duration="1s"
       >
-        <img src="img/brushes/portfolio/1.png" alt="image" />
+        <Image
+          height={200}
+          width={200}
+          src="/img/brushes/portfolio/1.png"
+          alt="image"
+        />
       </motion.div>
-      {/* <motion.div
-        className="absolute -top-10 right-32 -z-20"
+      <motion.div
+        className="absolute top-6 right-32 -z-20 hidden"
         initial={{ opacity: 0, x: -200 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}
       >
         <Image
-          height="200px"
+          // layout="fill"
+          height="80px"
           width="200px"
-          src="/img/logo/1.webp"
+          src={logo}
           alt="image"
         />
-      </motion.div> */}
+      </motion.div>
     </section>
   );
 };

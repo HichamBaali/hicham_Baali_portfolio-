@@ -1,4 +1,5 @@
-import DarkModeToggle from "react-dark-mode-toggle";
+// import DarkModeToggle from "react-dark-mode-toggle";
+import { DarkModeToggle } from "react-dark-mode-toggle-2";
 
 const Header = ({ logo, isDarkMode, setIsDarkMode }) => {
   return (
@@ -6,11 +7,11 @@ const Header = ({ logo, isDarkMode, setIsDarkMode }) => {
       <div className="container">
         <div className="inner">
           <div className="logo">
-            {/* <a href="#">
+            <a href="#">
               {logo && (
-                <img src={logo ? logo : "img/logo/logo.png"} alt="image" />
+                <img src={logo ? logo : "img/logo/1.webp"} alt="image" />
               )}
-            </a> */}
+            </a>
           </div>
           <div className="menu">
             <ul className="anchor_nav">
@@ -37,14 +38,22 @@ const Header = ({ logo, isDarkMode, setIsDarkMode }) => {
                   <span>Download CV</span>
                 </a>
               </li>
-              <li className="darkMode">
-                <a href="#">
+              <li>
+                <a
+                  href="#"
+                  className="flex flex-col gap-0 justify-center items-center h-[45px]"
+                >
                   <DarkModeToggle
                     onChange={setIsDarkMode}
-                    checked={isDarkMode}
-                    size={50}
+                    isDarkMode={isDarkMode}
                   />
-                  {isDarkMode ? "Dark mode" : "light mode"}
+                  {/* <DarkModeToggle
+                    onChange={setIsDarkMode}
+                    checked={isDarkMode}
+                    size={40}
+                    className="h-[45px]"
+                  /> */}
+                  {isDarkMode ? "Dark" : "light"}
                 </a>
               </li>
             </ul>
