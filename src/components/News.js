@@ -6,7 +6,7 @@ const News = () => {
     {
       title:
         "Learn English, be more confident, start now with our amazing team of teachers",
-      img: "img/news/1.jpg",
+      img: "img/news/1.webp",
       category: "SpeakIzy English Course",
       date: { date: "23", month: "Dec" },
       details: [
@@ -15,7 +15,7 @@ const News = () => {
     },
     {
       title: "How to be appreciated for your hard work as a developer",
-      img: "img/news/2.jpg",
+      img: "img/news/2.webp",
       category: "Branding",
       date: { date: "23", month: "Dec" },
       details: [
@@ -26,7 +26,7 @@ const News = () => {
     },
     {
       title: "How designers and developers can collaborate better",
-      img: "img/news/3.jpg",
+      img: "img/news/3.webp",
       category: "Social Media",
       date: { date: "23", month: "Dec" },
       details: [
