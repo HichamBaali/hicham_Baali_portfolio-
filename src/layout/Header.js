@@ -3,8 +3,9 @@ import DarkModeToggle from "react-dark-mode-toggle";
 
 const Header = ({ logo, isDarkMode, setIsDarkMode }) => {
   const handelDarkModeClock = () => {
+    // localStorage.setItem("isDarkMode", !isDarkMode);
     setIsDarkMode(!isDarkMode);
-    console.log(isDarkMode);
+    // console.log("is dark mode", isDarkMode);
   };
   return (
     <div className="dizme_tm_header">
@@ -49,7 +50,8 @@ const Header = ({ logo, isDarkMode, setIsDarkMode }) => {
                 >
                   <DarkModeToggle
                     onChange={() => handelDarkModeClock()}
-                    isDarkMode={isDarkMode}
+                    checked={isDarkMode}
+                    className="bg-slate-600"
                   />
                   {/* <DarkModeToggle
                     onChange={setIsDarkMode}

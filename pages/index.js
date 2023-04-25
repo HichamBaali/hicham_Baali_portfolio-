@@ -19,6 +19,16 @@ const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
 
 const Index = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  // useEffect(() => {
+  //   const storageDarkModeStatus = JSON.parse(
+  //     localStorage.getItem("isDarkMode")
+  //   );
+  //   storageDarkModeStatus
+  //     ? setIsDarkMode(storageDarkModeStatus)
+  //     : setIsDarkMode(false);
+  //   console.log("topleve is dark", isDarkMode);
+  // }, []);
+
   useEffect(() => {
     if (isDarkMode) {
       document.querySelector("body").classList.add("dark");
