@@ -2,7 +2,7 @@ import DarkModeToggle from "react-dark-mode-toggle";
 // import { DarkModeToggle } from "react-dark-mode-toggle-2";
 
 const Header = ({ logo, isDarkMode, setIsDarkMode }) => {
-  handelDarkModeClock = () => {
+  const handelDarkModeClock = () => {
     setIsDarkMode(!isDarkMode);
     console.log(isDarkMode);
   };
