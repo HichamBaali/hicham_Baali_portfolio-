@@ -13,11 +13,11 @@ const Home = ({ dark, isDarkMode }) => {
     address: "Algeria",
     bio: "I'm motivated English teacher, and I'm very passionate and dedicated to my work.",
     mainSkill: "Creative English teacher",
-    img: "/img/slider/avatar.webp",
+    img: "img/slider/avatar.webp",
     skills: [
       {
         name: "Scientific_Research",
-        icon: "/img/logo/2.webp",
+        icon: "img/logo/2.webp",
         color: "rgb(247, 80, 35)",
         value: 90,
       },
