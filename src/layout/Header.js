@@ -46,12 +46,12 @@ const Header = ({ logo, isDarkMode, setIsDarkMode }) => {
               <li>
                 <a
                   href="#"
-                  className="flex flex-col gap-0 justify-center items-center h-[45px]"
+                  className="flex flex-col gap-0 justify-center items-center "
                 >
                   <DarkModeToggle
                     onChange={() => handelDarkModeClock()}
                     checked={isDarkMode}
-                    className="bg-slate-600"
+                    size={50}
                   />
                   {/* <DarkModeToggle
                     onChange={setIsDarkMode}
