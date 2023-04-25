@@ -3,21 +3,73 @@ import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
 import Image from "next/image";
 import DarkModeToggle from "react-dark-mode-toggle";
-import infor from "../../public/";
 
 // import { Widget } from "@typeform/embed-react";
 
 const Home = ({ dark, isDarkMode }) => {
-  const [data, setData] = useState({});
+  // const [data, setData] = useState({});
+  const data = {
+    name: "Hicham Baali",
+    address: "Algeria",
+    bio: "I'm motivated English teacher, and I'm very passionate and dedicated to my work.",
+    mainSkill: "Creative English teacher",
+    img: "/img/slider/avatar.webp",
+    skills: [
+      {
+        name: "Scientific_Research",
+        icon: "/img/logo/2.webp",
+        color: "rgb(247, 80, 35)",
+        value: 90,
+      },
+      {
+        name: "Teaching_Skills",
+        color: "rgb(28, 190, 89)",
+        value: 95,
+      },
+      {
+        name: "Soft_Skills",
+        color: "rgb(128, 103, 240)",
+        value: 88,
+      },
+    ],
+    social: [
+      {
+        name: "facebook",
+        icon: "icon-facebook-1",
+        url: "https://www.facebook.com/hicham.baali.921?mibextid=ZbWKwL",
+      },
+      {
+        name: "twitter",
+        icon: "icon-twitter-1",
+        url: "https://twitter.com/HichamBaaLi?t=5pD_MQZG-YKoaXCbjjN42Q&s=09",
+      },
+      {
+        name: "linkedin",
+        icon: "icon-linkedin-1",
+        url: "https://www.linkedin.com/in/hicham-baali/",
+      },
+      {
+        name: "instagram",
+        icon: "icon-instagram-1",
+        url: "https://www.instagram.com/hicham__baali/",
+      },
+    ],
+    contact: {
+      address: "Msila, Algeria",
+      email: "hi.baali@lagh-univ.dz",
+      phn: "+213 665 010 330",
+    },
+  };
+
   const [image, setImage] = useState("");
-  useEffect(() => {
-    async function fetchdata() {
-      // You can await here
-      setData(await fatchData("../../public/static/info.json"));
-      // ...
-    }
-    fetchdata();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchdata() {
+  //     // You can await here
+  //     setData(await fatchData("/static/info.json"));
+  //     // ...
+  //   }
+  //   fetchdata();
+  // }, []);
   useEffect(() => {
     if (isDarkMode) {
       setImage("img/slider/2.jpg");
@@ -91,8 +143,9 @@ const Home = ({ dark, isDarkMode }) => {
             </div>
             <div className="avatar">
               <div className="image">
-                <img
-                  src={data && data.img ? data.img : "/img/slider/avatar.webp"}
+                <Image
+                  layout="fill"
+                  src="/img/slider/avatar.webp"
                   alt="image"
                 />
                 {data &&
