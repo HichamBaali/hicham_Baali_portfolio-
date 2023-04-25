@@ -9,8 +9,13 @@ import DarkModeToggle from "react-dark-mode-toggle";
 const Home = ({ dark, isDarkMode }) => {
   const [data, setData] = useState({});
   const [image, setImage] = useState("");
-  useEffect(async () => {
-    setData(await fatchData("/static/info.json"));
+  useEffect(() => {
+    async function fetchdata() {
+      // You can await here
+      setData(await fatchData("/static/info.json"));
+      // ...
+    }
+    fetchdata();
   }, []);
   useEffect(() => {
     if (isDarkMode) {
