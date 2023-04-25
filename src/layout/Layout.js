@@ -18,9 +18,16 @@ import PreLoader from "./PreLoader";
 import Progressbar from "./Progressbar";
 
 const Layout = ({ children, dark, isDarkMode, setIsDarkMode }) => {
-  const [siteInfo, setSiteInfo] = useState({});
-  useEffect(async () => {
-    setSiteInfo(await fatchData("/static/siteSetting.json"));
+  const siteInfo = {
+    logo: {
+      dark: "img/logo/1.webp",
+      light: "img/logo/1.webp",
+    },
+    brandName: "Codeefly",
+  };
+
+  useEffect(() => {
+    // setSiteInfo(await fatchData("/static/siteSetting.json"));
     dataImage();
   }, []);
   useEffect(() => {
