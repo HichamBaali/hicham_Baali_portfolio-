@@ -14,8 +14,8 @@ const Description = () => {
   // });
 
   return (
-    <section className="overflow-x-hidden overflow-y-hidden">
-      <div className="relative text-rigt flex flex-col justify-center items-center mx-auto  w-[80%] h-screen sm:flex-row ">
+    <section className="">
+      <div className="relative text-rigt flex flex-col justify-center items-center mx-auto w-[90%] h-screen sm:flex-row sm:gap-[100px]">
         <motion.div
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
@@ -32,19 +32,19 @@ const Description = () => {
           <div className="hidden md:block">
             <ReactPlayer
               url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-              width={400}
-              height={500}
+              width={500}
+              height={300}
               loop={true}
               controls={true}
               playing={isPlaying}
               onReady={() => setIsPlaying(true)}
             />
           </div>
-          <div className="md:hidden m-auto">
+          <div className="md:hidden m-auto mb-6">
             <ReactPlayer
               url="https://www.youtu.be/ysz5S6PUM-U"
-              width={400}
-              // height={500}
+              width={350}
+              height={200}
               loop={true}
               controls={true}
               playing={isPlaying}
