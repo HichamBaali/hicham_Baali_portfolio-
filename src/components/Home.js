@@ -56,7 +56,7 @@ const Home = ({ dark, isDarkMode }) => {
                 <h3 className="orangeText">{`Hello, I'm`}</h3>
               </div>
               <div className="name">
-                <h3>{data && data.name ? data.name : "name"}</h3>
+                <h3>{data && data.name ? data.name : "hicham baali"}</h3>
               </div>
               <div className="job">
                 <p>
