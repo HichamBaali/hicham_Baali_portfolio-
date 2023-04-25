@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
 import Image from "next/image";
 import DarkModeToggle from "react-dark-mode-toggle";
+import infor from "../../public/";
 
 // import { Widget } from "@typeform/embed-react";
 
@@ -12,7 +13,7 @@ const Home = ({ dark, isDarkMode }) => {
   useEffect(() => {
     async function fetchdata() {
       // You can await here
-      setData(await fatchData("/static/info.json"));
+      setData(await fatchData("../../public/static/info.json"));
       // ...
     }
     fetchdata();
