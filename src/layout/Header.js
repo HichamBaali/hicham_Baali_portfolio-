@@ -2,6 +2,10 @@ import DarkModeToggle from "react-dark-mode-toggle";
 // import { DarkModeToggle } from "react-dark-mode-toggle-2";
 
 const Header = ({ logo, isDarkMode, setIsDarkMode }) => {
+  handelDarkModeClock = () => {
+    setIsDarkMode(!isDarkMode);
+    console.log(isDarkMode);
+  };
   return (
     <div className="dizme_tm_header">
       <div className="container">
@@ -44,7 +48,7 @@ const Header = ({ logo, isDarkMode, setIsDarkMode }) => {
                   className="flex flex-col gap-0 justify-center items-center h-[45px]"
                 >
                   <DarkModeToggle
-                    onChange={() => setIsDarkMode(!isDarkMode)}
+                    onChange={() => handelDarkModeClock()}
                     isDarkMode={isDarkMode}
                   />
                   {/* <DarkModeToggle
