@@ -143,9 +143,8 @@ const Home = ({ dark, isDarkMode }) => {
             </div>
             <div className="avatar">
               <div className="image">
-                <Image
-                  layout="fill"
-                  src="/img/slider/avatar.webp"
+                <img
+                  src={data && data.img ? data.img : "/img/slider/avatar.webp"}
                   alt="image"
                 />
                 {data &&

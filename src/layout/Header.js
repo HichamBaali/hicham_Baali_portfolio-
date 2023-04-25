@@ -44,7 +44,7 @@ const Header = ({ logo, isDarkMode, setIsDarkMode }) => {
                   className="flex flex-col gap-0 justify-center items-center h-[45px]"
                 >
                   <DarkModeToggle
-                    onChange={setIsDarkMode}
+                    onChange={() => setIsDarkMode(!isDarkMode)}
                     isDarkMode={isDarkMode}
                   />
                   {/* <DarkModeToggle
