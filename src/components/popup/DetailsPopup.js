@@ -9,22 +9,22 @@ const DetailsPopup = ({ open, close }) => {
         </div>
         <div className="description_wrap">
           <div className="popup_details">
-            <div className="top_image">
+            {/* <div className="top_image">
               <img src="img/thumbs/4-2.jpg" alt="image" />
               <div
                 className="main"
                 data-img-url="img/portfolio/6.jpg"
                 style={{ backgroundImage: 'url("img/portfolio/6.jpg")' }}
               />
-            </div>
-            <div className="portfolio_main_title">
+            </div> */}
+            {/* <div className="portfolio_main_title">
               <h3>Global Evolution</h3>
               <span>
                 <a href="#">Detail</a>
               </span>
               <div />
-            </div>
-            <div className="main_details">
+            </div> */}
+            {/* <div className="main_details">
               <div className="textbox">
                 <p>
                   We live in a world where we need to move quickly and iterate
@@ -57,7 +57,7 @@ const DetailsPopup = ({ open, close }) => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
             <div className="additional_images">
               <ul>
                 <li>

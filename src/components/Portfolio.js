@@ -108,7 +108,7 @@ const Portfolio = () => {
           <div className="dizme_tm_portfolio_titles" />
           <div className="portfolio_list wow fadeInUp" data-wow-duration="1s">
             <ul className="gallery_zoom grid">
-              <li className="youtube grid-item">
+              <li className="youtube grid-item hidden sm:inline-block">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
@@ -132,7 +132,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </li>
-              <li className="vimeo grid-item">
+              <li className="vimeo grid-item hidden sm:inline-block">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
@@ -156,7 +156,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </li>
-              <li className="soundcloud grid-item">
+              <li className="soundcloud grid-item hidden sm:inline-block">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
@@ -180,7 +180,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </li>
-              <li className="popup grid-item">
+              <li className="popup grid-item hidden sm:inline-block">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
@@ -201,7 +201,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </li>
-              <li className="popup grid-item">
+              <li className="popup grid-item hidden sm:inline-block">
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
@@ -223,7 +223,34 @@ const Portfolio = () => {
                 </div>
               </li>
 
-              <li className="detail grid-item" onClick={() => setPopup(true)}>
+              <li
+                className="detail grid-item hidden sm:inline-block"
+                onClick={() => setPopup(true)}
+              >
+                <div className="inner">
+                  <div
+                    className="entry dizme_tm_portfolio_animation_wrap"
+                    data-title="Global Evolution"
+                    data-category="Detail"
+                  >
+                    <a className="portfolio_popup" href="#">
+                      <img src="img/thumbs/42-34.jpg" alt="image" />
+                      <div
+                        className="main"
+                        data-img-url="img/portfolio/6.jpg"
+                      />
+                    </a>
+                  </div>
+                  <div className="mobile_title">
+                    <h3>Global Evolution</h3>
+                    <span>Detail</span>
+                  </div>
+                </div>
+              </li>
+              <li
+                className="detail grid-item sm:hidden"
+                onClick={() => setPopup(true)}
+              >
                 <div className="inner">
                   <div
                     className="entry dizme_tm_portfolio_animation_wrap"
