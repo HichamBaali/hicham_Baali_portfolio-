@@ -1,10 +1,59 @@
 import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
 const Contact = () => {
-  const [data, setData] = useState({});
-  useEffect(async () => {
-    setData(await fatchData("/static/info.json"));
-  }, []);
+  const data = {
+    name: "Hicham Baali",
+    address: "Algeria",
+    bio: "I'm motivated English teacher, and I'm very passionate and dedicated to my work.",
+    mainSkill: "Creative English teacher",
+    img: "/img/slider/avatar.webp",
+    skills: [
+      {
+        name: "Scientific_Research",
+        icon: "/img/logo/2.webp",
+        color: "rgb(247, 80, 35)",
+        value: 90,
+      },
+      {
+        name: "Teaching_Skills",
+        color: "rgb(28, 190, 89)",
+        value: 95,
+      },
+      {
+        name: "Soft_Skills",
+        color: "rgb(128, 103, 240)",
+        value: 88,
+      },
+    ],
+    social: [
+      {
+        name: "facebook",
+        icon: "icon-facebook-1",
+        url: "https://www.facebook.com/hicham.baali.921?mibextid=ZbWKwL",
+      },
+      {
+        name: "twitter",
+        icon: "icon-twitter-1",
+        url: "https://twitter.com/HichamBaaLi?t=5pD_MQZG-YKoaXCbjjN42Q&s=09",
+      },
+      {
+        name: "linkedin",
+        icon: "icon-linkedin-1",
+        url: "https://www.linkedin.com/in/hicham-baali/",
+      },
+      {
+        name: "instagram",
+        icon: "icon-instagram-1",
+        url: "https://www.instagram.com/hicham__baali/",
+      },
+    ],
+    contact: {
+      address: "Msila, Algeria",
+      email: "hi.baali@lagh-univ.dz",
+      phn: "+213 665 010 330",
+    },
+  };
+
   return (
     <div className="dizme_tm_section" id="contact">
       <div className="dizme_tm_contact">

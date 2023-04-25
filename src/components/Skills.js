@@ -2,14 +2,68 @@ import { useEffect, useState } from "react";
 import { activeSkillProgress, fatchData } from "../utilits";
 import Image from "next/image";
 
+import skillsImage from "../../public/img/skills/1.webp";
+
 const Skills = ({ dark }) => {
-  const [data, setData] = useState({});
-  useEffect(() => {
-    async function fetchdata() {
-      setData(await fatchData("/static/info.json"));
-    }
-    fetchdata();
-  }, []);
+  const data = {
+    name: "Hicham Baali",
+    address: "Algeria",
+    bio: "I'm motivated English teacher, and I'm very passionate and dedicated to my work.",
+    mainSkill: "Creative English teacher",
+    img: "/img/slider/avatar.webp",
+    skills: [
+      {
+        name: "Scientific_Research",
+        icon: "/img/logo/2.webp",
+        color: "rgb(247, 80, 35)",
+        value: 90,
+      },
+      {
+        name: "Teaching_Skills",
+        color: "rgb(28, 190, 89)",
+        value: 95,
+      },
+      {
+        name: "Soft_Skills",
+        color: "rgb(128, 103, 240)",
+        value: 88,
+      },
+    ],
+    social: [
+      {
+        name: "facebook",
+        icon: "icon-facebook-1",
+        url: "https://www.facebook.com/hicham.baali.921?mibextid=ZbWKwL",
+      },
+      {
+        name: "twitter",
+        icon: "icon-twitter-1",
+        url: "https://twitter.com/HichamBaaLi?t=5pD_MQZG-YKoaXCbjjN42Q&s=09",
+      },
+      {
+        name: "linkedin",
+        icon: "icon-linkedin-1",
+        url: "https://www.linkedin.com/in/hicham-baali/",
+      },
+      {
+        name: "instagram",
+        icon: "icon-instagram-1",
+        url: "https://www.instagram.com/hicham__baali/",
+      },
+    ],
+    contact: {
+      address: "Msila, Algeria",
+      email: "hi.baali@lagh-univ.dz",
+      phn: "+213 665 010 330",
+    },
+  };
+
+  // useEffect(() => {
+  //   async function fetchdata() {
+  //     setData(await fatchData("/static/info.json"));
+  //   }
+  //   fetchdata();
+  // }, []);
   useEffect(() => {
     window.addEventListener("scroll", activeSkillProgress);
   }, []);
@@ -58,10 +112,18 @@ const Skills = ({ dark }) => {
               </div>
             </div>
             <div className="right">
+              <Image layout="fill" src="img/skills/1.webp" alt="image" />
               <Image
-                height={600}
-                width={600}
-                src={`/img/skills/${dark ? 2 : 1}.png`}
+                layout="responsive"
+                height={4096}
+                width={4096}
+                src={skillsImage}
+                alt="image"
+              />
+              <Image
+                height={200}
+                width={200}
+                src="/img/brushes/portfolio/1.png"
                 alt="image"
               />
             </div>
