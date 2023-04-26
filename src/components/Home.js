@@ -101,7 +101,7 @@ const Home = ({ dark, isDarkMode }) => {
           style={{ backgroundImage: `${data-img-url}` }}
         /> */}
         <img
-          src={isDarkMode ? `/img/slider/2.jpg` : `/img/slider/1.jpg`}
+          src={image}
           style={{
             zIndex: 0,
             position: "absolute",
