@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { activeSkillProgress, fatchData } from "../utilits";
 import Image from "next/image";
 
-import skillsImage from "../../public/img/skills/1.webp";
-
 const Skills = ({ dark }) => {
   const data = {
     name: "Hicham Baali",
@@ -117,7 +115,7 @@ const Skills = ({ dark }) => {
                 objectFit="cover"
                 height={4096}
                 width={4096}
-                src={skillsImage}
+                src="/img/skills/1.webp"
                 alt="image"
               />
               <div className="absolute top-0 right-[70%]">
