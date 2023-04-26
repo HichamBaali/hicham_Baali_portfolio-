@@ -111,21 +111,24 @@ const Skills = ({ dark }) => {
                   ))}
               </div>
             </div>
-            <div className="right">
-              <Image layout="fill" src="img/skills/1.webp" alt="image" />
+            <div className="right relative">
               <Image
                 layout="responsive"
+                objectFit="cover"
                 height={4096}
                 width={4096}
                 src={skillsImage}
                 alt="image"
               />
-              <Image
-                height={200}
-                width={200}
-                src="/img/brushes/portfolio/1.png"
-                alt="image"
-              />
+              <div className="absolute top-0 right-[70%]">
+                <Image
+                  height={200}
+                  width={200}
+                  src="/img/brushes/portfolio/1.png"
+                  alt="image"
+                  c
+                />
+              </div>
             </div>
           </div>
         </div>

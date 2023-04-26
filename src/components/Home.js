@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
 import Image from "next/image";
 import DarkModeToggle from "react-dark-mode-toggle";
+import heroImage from "../../public/img/slider/avatar.png";
 
 // import { Widget } from "@typeform/embed-react";
 
@@ -13,7 +14,7 @@ const Home = ({ dark, isDarkMode }) => {
     address: "Algeria",
     bio: "I'm motivated English teacher, and I'm very passionate and dedicated to my work.",
     mainSkill: "Creative English teacher",
-    img: "img/slider/avatar.webp",
+    img: "/img/slider/avatar.png",
     skills: [
       {
         name: "Scientific_Research",
@@ -69,7 +70,7 @@ const Home = ({ dark, isDarkMode }) => {
     },
   };
 
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState("/img/slider/1.jpg");
   // useEffect(() => {
   //   async function fetchdata() {
   //     // You can await here
@@ -80,9 +81,9 @@ const Home = ({ dark, isDarkMode }) => {
   // }, []);
   useEffect(() => {
     if (isDarkMode) {
-      setImage("img/slider/2.jpg");
+      setImage("/img/slider/2.jpg");
     } else {
-      setImage("img/slider/1.jpg");
+      setImage("/img/slider/1.jpg");
     }
   }, [isDarkMode]);
   return (
@@ -90,24 +91,24 @@ const Home = ({ dark, isDarkMode }) => {
       <div className="dizme_tm_hero">
         {/* <div
           className="background"
-          // data-img-url={`img/slider/${isDarkMode ? 2 : 1}.jpg`}
+          data-img-url={`img/slider/${isDarkMode ? 2 : 1}.jpg`}
           data-img-url={isDarkMode ? `img/slider/2.jpg` : `img/slider/1.jpg`}
-          // style={{
-          //   backgroundImage: isDarkMode
-          //     ? `img/slider/2.jpg`
-          //     : `img/slider/1.jpg`,
-          // }}
+          style={{
+            backgroundImage: isDarkMode
+              ? `img/slider/2.jpg`
+              : `img/slider/1.jpg`,
+          }}
           style={{ backgroundImage: `${data-img-url}` }}
         /> */}
         <img
-          src={image}
+          src={isDarkMode ? `/img/slider/2.jpg` : `/img/slider/1.jpg`}
           style={{
             zIndex: 0,
             position: "absolute",
             height: " 100%",
             width: " 100%",
           }}
-          alt="hero background"
+          alt="hero background image"
         />
 
         <div className="container">
@@ -151,7 +152,10 @@ const Home = ({ dark, isDarkMode }) => {
             </div>
             <div className="avatar">
               <div className="image">
-                <img
+                <Image
+                  objectFit="cover"
+                  height={750}
+                  width={600}
                   src={data && data.img ? data.img : "/img/slider/avatar.webp"}
                   alt="image"
                 />

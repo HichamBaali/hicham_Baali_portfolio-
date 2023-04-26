@@ -3,7 +3,7 @@ const nextConfig = {
   experimental: {
     forceSwcTransforms: true,
   },
-  reactStrictMode: true,
+  // reactStrictMode: true,
   images: {
     // limit of 25 deviceSizes values
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -12,10 +12,10 @@ const nextConfig = {
     // limit of 50 domains values
     domains: [],
     // path prefix for Image Optimization API, useful with `loader`
-    path: "/_next/image",
+    // path: "/_next/image",
     // loader can be 'default', 'imgix', 'cloudinary', 'akamai', or 'custom'
     loader: "akamai",
-    path: "../../public",
+    path: "",
     // file with `export default function loader({src, width, quality})`
     loaderFile: "",
     // disable static imports for image files

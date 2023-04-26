@@ -98,6 +98,11 @@ const News = () => {
                           </div>
                         </div>
                       </div>
+                      <div className="dizme_tm_button mt-4">
+                        <a className="anchor" href="#about">
+                          <span>About Me</span>
+                        </a>
+                      </div>
                     </div>
                   </li>
                 ))}
