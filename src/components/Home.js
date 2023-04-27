@@ -4,6 +4,8 @@ import { fatchData } from "../utilits";
 import Image from "next/image";
 import DarkModeToggle from "react-dark-mode-toggle";
 import heroImage from "../../public/img/slider/avatar.png";
+import darkBackground from "../../public/img/slider/2.jpg";
+import liteBackground from "../../public/img/slider/1.jpg";
 
 // import { Widget } from "@typeform/embed-react";
 
@@ -14,7 +16,7 @@ const Home = ({ dark, isDarkMode }) => {
     address: "Algeria",
     bio: "I'm motivated English teacher, and I'm very passionate and dedicated to my work.",
     mainSkill: "Creative English teacher",
-    img: "/img/slider/avatar.png",
+    img: heroImage,
     skills: [
       {
         name: "Scientific_Research",
@@ -70,7 +72,7 @@ const Home = ({ dark, isDarkMode }) => {
     },
   };
 
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(liteBackground);
   // useEffect(() => {
   //   async function fetchdata() {
   //     // You can await here
@@ -81,9 +83,9 @@ const Home = ({ dark, isDarkMode }) => {
   // }, []);
   useEffect(() => {
     if (isDarkMode) {
-      setImage("img/slider/2.jpg");
+      setImage(darkBackground);
     } else {
-      setImage("img/slider/1.jpg");
+      setImage(liteBackground);
     }
   }, [isDarkMode]);
   return (
@@ -100,15 +102,18 @@ const Home = ({ dark, isDarkMode }) => {
           // }}
           style={{ backgroundImage: `${data-img-url}` }}
         /> */}
-        <img
+        <Image
+          objectFit="cointain"
           src={image}
-          style={{
-            zIndex: 0,
-            position: "absolute",
-            height: " 100%",
-            width: " 100%",
-          }}
+          placeholder="blur"
+          // style={{
+          //   zIndex: 0,
+          //   position: "absolute",
+          //   height: " 100%",
+          //   width: " 100%",
+          // }}
           alt="hero background"
+          layout="fill"
         />
 
         <div className="container">
@@ -151,12 +156,12 @@ const Home = ({ dark, isDarkMode }) => {
               </div>
             </div>
             <div className="avatar">
-              <div className="image">
+              <div className="image px-[50px]">
                 <Image
-                  layout="responsive"
-                  objectFit="cover"
+                  objectFit="cointain"
                   height={750}
                   width={600}
+                  placeholder="blur"
                   src={data && data.img ? data.img : "/img/slider/avatar.webp"}
                   alt="image"
                 />
