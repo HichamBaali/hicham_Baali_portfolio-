@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
 import Image from "next/image";
 import DarkModeToggle from "react-dark-mode-toggle";
-import heroImage from "/img/slider/avatar.png";
-import darkBackground from "/img/slider/2.jpg";
-import liteBackground from "/img/slider/1.jpg";
+// import heroImage from "/img/slider/avatar.png";
+// import darkBackground from "/img/slider/2.jpg";
+// import liteBackground from "/img/slider/1.jpg";
 
 // import { Widget } from "@typeform/embed-react";
 
@@ -16,7 +16,7 @@ const Home = ({ dark, isDarkMode }) => {
     address: "Algeria",
     bio: "I'm motivated English teacher, and I'm very passionate and dedicated to my work.",
     mainSkill: "Creative English teacher",
-    img: heroImage,
+    img: "/img/slider/avatar.png",
     skills: [
       {
         name: "Scientific_Research",
@@ -72,7 +72,7 @@ const Home = ({ dark, isDarkMode }) => {
     },
   };
 
-  const [image, setImage] = useState(liteBackground);
+  const [image, setImage] = useState("/img/slider/1.jpg");
   // useEffect(() => {
   //   async function fetchdata() {
   //     // You can await here
@@ -83,9 +83,9 @@ const Home = ({ dark, isDarkMode }) => {
   // }, []);
   useEffect(() => {
     if (isDarkMode) {
-      setImage(darkBackground);
+      setImage("/img/slider/2.jpg");
     } else {
-      setImage(liteBackground);
+      setImage("/img/slider/1.jpg");
     }
   }, [isDarkMode]);
   return (
@@ -103,9 +103,9 @@ const Home = ({ dark, isDarkMode }) => {
           style={{ backgroundImage: `${data-img-url}` }}
         /> */}
         <Image
-          objectFit="contain"
+          // objectFit="contain"
           src={image}
-          placeholder="blur"
+          // placeholder="blur"
           priority={true}
           // style={{
           //   zIndex: 0,
@@ -162,7 +162,7 @@ const Home = ({ dark, isDarkMode }) => {
                   objectFit="contain"
                   height={750}
                   width={600}
-                  placeholder="blur"
+                  // placeholder="blur"
                   src={data && data.img ? data.img : "/img/slider/avatar.webp"}
                   alt="image"
                 />
