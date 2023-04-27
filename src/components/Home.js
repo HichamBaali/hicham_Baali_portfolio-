@@ -106,6 +106,7 @@ const Home = ({ dark, isDarkMode }) => {
           objectFit="cointain"
           src={image}
           placeholder="blur"
+          priority
           // style={{
           //   zIndex: 0,
           //   position: "absolute",
