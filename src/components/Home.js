@@ -105,8 +105,8 @@ const Home = ({ dark, isDarkMode }) => {
         <Image
           objectFit="cointain"
           src={image}
-          placeholder="blur"
-          priority
+          // placeholder="blur"
+          priority={true}
           // style={{
           //   zIndex: 0,
           //   position: "absolute",
@@ -162,7 +162,7 @@ const Home = ({ dark, isDarkMode }) => {
                   objectFit="cointain"
                   height={750}
                   width={600}
-                  placeholder="blur"
+                  // placeholder="blur"
                   src={data && data.img ? data.img : "/img/slider/avatar.webp"}
                   alt="image"
                 />
