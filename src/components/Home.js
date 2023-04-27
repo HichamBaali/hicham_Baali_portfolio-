@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
 import Image from "next/image";
 import DarkModeToggle from "react-dark-mode-toggle";
-import heroImage from "../../public/img/slider/avatar.png";
-import darkBackground from "../../public/img/slider/2.jpg";
-import liteBackground from "../../public/img/slider/1.jpg";
+import heroImage from "/img/slider/avatar.png";
+import darkBackground from "/img/slider/2.jpg";
+import liteBackground from "/img/slider/1.jpg";
 
 // import { Widget } from "@typeform/embed-react";
 
@@ -103,9 +103,9 @@ const Home = ({ dark, isDarkMode }) => {
           style={{ backgroundImage: `${data-img-url}` }}
         /> */}
         <Image
-          objectFit="cointain"
+          objectFit="contain"
           src={image}
-          // placeholder="blur"
+          placeholder="blur"
           priority={true}
           // style={{
           //   zIndex: 0,
@@ -159,10 +159,10 @@ const Home = ({ dark, isDarkMode }) => {
             <div className="avatar">
               <div className="image px-[50px]">
                 <Image
-                  objectFit="cointain"
+                  objectFit="contain"
                   height={750}
                   width={600}
-                  // placeholder="blur"
+                  placeholder="blur"
                   src={data && data.img ? data.img : "/img/slider/avatar.webp"}
                   alt="image"
                 />
