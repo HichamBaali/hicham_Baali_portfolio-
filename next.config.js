@@ -12,7 +12,7 @@ const nextConfig = {
     // limit of 50 domains values
     domains: [],
     // path prefix for Image Optimization API, useful with `loader`
-    path: "/_next/image",
+    // path: "/_next/image",
     // loader can be 'default', 'imgix', 'cloudinary', 'akamai', or 'custom'
     // loaderFile: "",
     // loader: "default",
