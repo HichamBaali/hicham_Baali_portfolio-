@@ -10,7 +10,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@typeform/embed-react": "^2.20.0",
+    "emailjs": "^4.0.1",
     "framer-motion": "^6.5.1",
     "gsap": "^3.11.5",
     "html-react-parser": "^1.4.8",

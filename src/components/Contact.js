@@ -1,6 +1,49 @@
 import { useEffect, useState } from "react";
 import { fatchData } from "../utilits";
+
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
+  const initialValues = {
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  };
+  const [contactParams, setcontactParams] = useState(initialValues);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    console.log("changed", name, value);
+    setcontactParams({
+      ...contactParams,
+      [name]: value,
+    });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log("first", contactParams);
+    emailjs
+      .send(
+        "service_ob2hw2j",
+        "template_b2oypq8",
+        contactParams,
+        "KYQn6yvpbTSJcFzpl"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
+    setcontactParams(initialValues);
+  };
+
   const data = {
     name: "Hicham Baali",
     address: "Algeria",
@@ -111,8 +154,9 @@ const Contact = () => {
             <div className="right wow fadeInRight" data-wow-duration="1s">
               <div className="fields">
                 <form
-                  action="/"
-                  method="post"
+                  onSubmit={sendEmail}
+                  // action="/"
+                  // method="post"
                   className="contact_form"
                   id="contact_form"
                   autoComplete="off"
@@ -127,36 +171,59 @@ const Contact = () => {
                   <div className="input_list">
                     <ul>
                       <li>
-                        <input id="name" type="text" placeholder="Your Name" />
+                        <input
+                          value={contactParams.name}
+                          onChange={handleInputChange}
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="Your Name"
+                        />
                       </li>
                       <li>
                         <input
+                          value={contactParams.email}
+                          onChange={handleInputChange}
                           id="email"
+                          name="email"
                           type="text"
                           placeholder="Your Email"
                         />
                       </li>
                       <li>
                         <input
+                          value={contactParams.phone}
+                          onChange={handleInputChange}
                           id="phone"
+                          name="phone"
                           type="number"
                           placeholder="Your Phone"
                         />
                       </li>
                       <li>
-                        <input id="subject" type="text" placeholder="Subject" />
+                        <input
+                          value={contactParams.subject}
+                          onChange={handleInputChange}
+                          id="subject"
+                          name="subject"
+                          type="text"
+                          placeholder="Subject"
+                        />
                       </li>
                     </ul>
                   </div>
                   <div className="message_area">
                     <textarea
+                      value={contactParams.message}
+                      onChange={handleInputChange}
                       id="message"
+                      name="message"
                       placeholder="Write your message here"
                       defaultValue={""}
                     />
                   </div>
                   <div className="dizme_tm_button">
-                    <a id="send_message" href="#">
+                    <a onClick={sendEmail} id="send_message" href="">
                       <span>Submit Now</span>
                     </a>
                   </div>
