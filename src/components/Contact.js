@@ -234,27 +234,20 @@ const Contact = () => {
               <img src="img/brushes/contact/2.png" alt="image" />
             </div>
           </div>
+
           <div className="dizme_tm_map wow fadeInUp" data-wow-duration="1s">
             <div className="mapouter">
               <div className="gmap_canvas">
-                {/* <iframe
-                  width="800"
-                  height="600"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe> */}
                 <iframe
                   height={375}
                   style={{ width: "100%" }}
                   id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=speak-IZY%20academy&t=&z=17&ie=UTF8&iwloc=&output=embed"
                 />
                 <a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon" />
                 <br />
               </div>
             </div>
-            {/* Get your API here https://www.embedgooglemap.net */}
           </div>
         </div>
         <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
