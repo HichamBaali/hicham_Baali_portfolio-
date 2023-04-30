@@ -55,15 +55,16 @@ const Index = () => {
       {/* ABOUT */}
       <About dark={isDarkMode ? true : false} />
       {/* /ABOUT */}
+      {/* SKILLS */}
+      <Skills dark={isDarkMode ? true : false} />
+      {/* /SKILLS */}
       {/* COURSES */}
       <News />
       {/* COURSES */}
       {/* PORTFOLIO */}
       <Portfolio dark={isDarkMode ? true : false} />
       {/* /PORTFOLIO */}
-      {/* SKILLS */}
-      <Skills dark={isDarkMode ? true : false} />
-      {/* /SKILLS */}
+
       {/* SERVICES */}
       {/* <Service dark={isDarkMode ? true : false} /> */}
       {/* /SERVICES */}
